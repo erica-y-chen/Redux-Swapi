@@ -22,7 +22,6 @@ export const getChar = () => dispatch => {
                 payload: res.data
             });
         })
-
         .catch(err => {
             dispatch({
                 type: FAILURE,

@@ -1,6 +1,8 @@
 import {FETCHING, SUCCESS, FAILURE} from "../actions";
 const initialState = {
-  characters: []
+  characters: [],
+  error: '',
+  isFetching: false,
   // Array characters, Boolean fetching, null error.
 };
 export const charsReducer = (state = initialState, action) => {
