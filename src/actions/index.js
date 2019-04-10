@@ -15,11 +15,11 @@ export const getChar = () => dispatch => {
     dispatch({ type: FETCHING });
     
     axios 
-        .get('https://swapi.co/api/people/')
+        .get('https://swapi.co/api/people/?format=json')
         .then(res => {
             dispatch({
                 type: SUCCESS,
-                payload: res.data
+                payload: res.data.results
             });
         })
         .catch(err => {
